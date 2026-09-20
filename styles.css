@@ -325,8 +325,6 @@ a { color: inherit; text-decoration: none; }
   height: 220px;
   border: 2px solid var(--ink);
   margin-top: 16px;
-  filter: grayscale(1) contrast(1.15);
-  mix-blend-mode: multiply;
 }
 
 /* Contact */
@@ -501,3 +499,210 @@ a { color: inherit; text-decoration: none; }
 .hero-footnote { margin: 8px 0 0; max-width: 560px; font-size: 16px; font-weight: 500; }
 
 .site-footer .footer-disclaimer { margin-bottom: 10px; max-width: 640px; margin-left: auto; margin-right: auto; text-transform: none; letter-spacing: 0.02em; font-size: 17px; }
+
+/* Merkzettel */
+[hidden] { display: none !important; }
+
+.menu-list li .add-btn {
+  flex: none;
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  font-family: var(--font-body);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease, transform 0.12s ease;
+}
+
+.menu-list li .add-btn:hover { background: var(--ink); color: var(--red); }
+.menu-list li:hover .add-btn:hover { background: var(--red); color: var(--ink); }
+.menu-list li .add-btn.added { transform: scale(1.25); }
+
+.note-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 70;
+  background: var(--ink);
+  color: var(--red);
+  border: 2px solid var(--red);
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.note-fab span {
+  display: inline-block;
+  min-width: 26px;
+  margin-left: 6px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: var(--red);
+  color: var(--ink);
+  text-align: center;
+}
+
+.note-overlay { position: fixed; inset: 0; z-index: 200; }
+
+.note-backdrop { position: absolute; inset: 0; background: rgba(20, 17, 16, 0.55); }
+
+.note-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(440px, 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px calc(24px + env(safe-area-inset-bottom, 0px));
+  background: var(--ink);
+  color: var(--red);
+  overflow-y: auto;
+}
+
+.note-head { display: flex; align-items: center; justify-content: space-between; }
+
+.note-head h2 { margin: 0; font-family: var(--font-display); font-weight: 400; font-size: 44px; line-height: 1; text-transform: uppercase; }
+
+.note-close {
+  background: none;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: var(--red);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.note-hint { margin: 10px 0 20px; font-size: 18px; font-weight: 500; }
+
+.note-list { list-style: none; margin: 0; padding: 0; }
+
+.note-list li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 12px;
+  padding: 12px 0;
+  border-top: 1px solid rgba(229, 81, 74, 0.45);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.note-line-price { text-align: right; white-space: nowrap; }
+
+.note-qty { display: flex; align-items: center; gap: 10px; grid-column: 1 / -1; }
+
+.note-qty button {
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--red);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.note-qty button:hover { background: var(--red); color: var(--ink); }
+
+.note-qty output { min-width: 24px; text-align: center; font-weight: 700; }
+
+.note-empty { margin: 8px 0 20px; font-size: 20px; font-weight: 600; }
+
+.note-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  padding: 16px 0;
+  border-top: 2px solid var(--red);
+  font-family: var(--font-display);
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.note-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.note-actions .btn { background: transparent; color: var(--red); border-color: var(--red); font-size: 18px; padding: 8px 20px; cursor: pointer; }
+.note-actions .note-call { background: var(--red); color: var(--ink); }
+.note-actions .btn:hover { opacity: 0.85; }
+.note-actions .btn:disabled { opacity: 0.35; cursor: default; }
+
+.note-disclaimer { margin: 14px 0 0; font-size: 15px; font-weight: 500; }
+
+@media (max-width: 720px) {
+  .menu-list li .add-btn { width: 34px; height: 34px; }
+  .note-fab { bottom: 84px; right: 16px; }
+}
+
+/* Checker strips */
+.check-strip {
+  height: 18px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18'><rect x='0.5' y='0.5' width='8' height='8' rx='2' fill='%23faf4ea'/><rect x='9.5' y='9.5' width='8' height='8' rx='2' fill='%23faf4ea'/></svg>");
+  background-repeat: repeat-x;
+  opacity: 0.9;
+}
+
+.contact { position: relative; }
+
+.check-strip.on-dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18'><rect x='0.5' y='0.5' width='8' height='8' rx='2' fill='%23e5514a'/><rect x='9.5' y='9.5' width='8' height='8' rx='2' fill='%23e5514a'/></svg>");
+  opacity: 0.7;
+}
+
+/* Dezente Deko: Basilikum und Tomate */
+.deco {
+  position: absolute;
+  color: var(--ink);
+  --vein: var(--red);
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.hero, .menu, .about { position: relative; }
+
+.deco-hero { width: 230px; height: 230px; right: 6%; bottom: 40px; transform: rotate(18deg); }
+.deco-menu { width: 150px; height: 150px; top: 56px; right: 32px; transform: rotate(-14deg); }
+.deco-about { width: 190px; height: 190px; right: 32px; top: 50%; margin-top: -95px; transform: rotate(10deg); }
+
+.deco-contact {
+  color: var(--red);
+  --vein: var(--ink);
+  opacity: 0.28;
+  width: 250px;
+  height: 250px;
+  right: 8%;
+  bottom: 24px;
+  transform: rotate(-16deg);
+}
+
+@media (max-width: 960px) {
+  .deco-about { display: none; }
+}
+
+@media (max-width: 860px) {
+  .deco-hero, .deco-menu { display: none; }
+}
+
+@media (max-width: 720px) {
+  .deco-contact { width: 130px; height: 130px; right: 12px; bottom: 12px; }
+}
