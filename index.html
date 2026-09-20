@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pizzeria Spaghetteria "UNO" — Schmitten-Niederreifenberg</title>
+<meta name="description" content="Pizzeria Spaghetteria UNO in Schmitten-Niederreifenberg. Pizza aus dem Steinofen, Pasta, Lieferservice. Speisekarte, Öffnungszeiten und Standort.">
+<link rel="icon" href="assets/logo-black.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="site-header">
+  <a href="#top" class="logo">
+    <img src="assets/logo-black.png" alt="Pizzeria Uno" class="logo-img">
+  </a>
+  <nav class="site-nav">
+    <a href="#menu">Menü</a>
+    <a href="#about">Über uns</a>
+    <a href="#hours">Öffnungszeiten</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+  <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="sticker" aria-hidden="true">
+      <svg viewBox="0 0 100 100"><polygon points="50.0,0.0 55.8,9.4 64.1,2.0 67.0,12.7 77.0,7.9 76.8,19.0 87.8,17.3 84.5,27.8 95.5,29.2 89.3,38.4 99.5,42.9 91.0,50.0 99.5,57.1 89.3,61.6 95.5,70.8 84.5,72.2 87.8,82.7 76.8,81.0 77.0,92.1 67.0,87.3 64.1,98.0 55.8,90.6 50.0,100.0 44.2,90.6 35.9,98.0 33.0,87.3 23.0,92.1 23.2,81.0 12.2,82.7 15.5,72.2 4.5,70.8 10.7,61.6 0.5,57.1 9.0,50.0 0.5,42.9 10.7,38.4 4.5,29.2 15.5,27.8 12.2,17.3 23.2,19.0 23.0,7.9 33.0,12.7 35.9,2.0 44.2,9.4" fill="currentColor"/></svg>
+      <span class="sticker-text"><b>Lieferung</b>frei Haus<small>ab 3 Gerichten</small></span>
+    </div>
+    <h1 class="hero-h1"><img src="assets/logo-black.png" alt="Pizzeria Spaghetteria Uno" class="hero-logo"></h1>
+    <p class="hero-sub">Pizzeria Spaghetteria „UNO“ · Brunhildenstr. 40 · Schmitten-Niederreifenberg</p>
+    <div class="hero-actions">
+      <a href="tel:+4960824979948" class="btn btn-primary">Jetzt anrufen</a>
+      <a href="#menu" class="btn btn-ghost">Speisekarte</a>
+    </div>
+    <a href="tel:+4960824979948" class="phone-bar">06082 / 497 99 48</a>
+    <p class="hero-note">Abhol- &amp; Lieferservice · Alle Gerichte auch zum Mitnehmen</p>
+  </section>
+
+  <section id="menu" class="menu">
+    <h2 class="section-title reveal">Unsere <span class="accent">Speisekarte</span></h2>
+    <p class="section-sub">Pizza aus dem Steinofen · alle Gerichte auch zum Mitnehmen · Kategorie antippen zum Aufklappen</p>
+
+    <div class="filter-bar" role="group" aria-label="Speisekarte filtern">
+      <button class="filter-chip active" data-filter="alle">Alle</button>
+      <button class="filter-chip" data-filter="veg">Vegetarisch</button>
+      <button class="filter-chip" data-filter="fleisch">Fleisch</button>
+      <button class="filter-chip" data-filter="fisch">Fisch &amp; Meeresfrüchte</button>
+      <button class="filter-chip" data-filter="scharf">Scharf</button>
+    </div>
+
+    <p class="jump-bar">Direkt zu:
+      <a href="#cat-pizza">Pizza</a>
+      <a href="#cat-pasta">Pasta</a>
+      <a href="#cat-vorspeisen">Vorspeisen</a>
+      <a href="#cat-salate">Salate</a>
+      <a href="#cat-risotto">Risotto, Fisch &amp; Fleisch</a>
+      <a href="#cat-dessert">Dessert</a>
+      <a href="#cat-extras">Extrawünsche</a>
+    </p>
+
+    <div class="accordion">
+
+      <details class="menu-accordion reveal" id="cat-pizza" open>
+        <summary><span>Pizza</span><span class="chev">＋</span></summary>
+        <ul class="menu-list">
+          <li data-tags="veg"><span>Tomaten mit Käse</span><span class="dots"></span><span class="price">7,00 €</span></li>
+          <li data-tags="fleisch"><span>Tomaten, Käse und Salami</span><span class="dots"></span><span class="price">7,50 €</span></li>
+          <li data-tags="fisch"><span>Tomaten, Käse und Sardellen</span><span class="dots"></span><span class="price">8,00 €</span></li>
+          <li data-tags="fleisch"><span>Tomaten, Käse, Salami, Champignons</span><span class="dots"></span><span class="price">8,00 €</span></li>
+          <li data-tags="fleisch"><span>Tomaten, Käse, Salami, Champignons, Paprika</span><span class="dots"></span><span class="price">8,80 €</span></li>
+          <li data-tags="fleisch"><span>Tomaten, Käse, Salami, Champignons, Peperoni</span><span class="dots"></span><span class="price">9,20 €</span></li>
+          <li data-tags="fleisch"><span>Tomaten, Käse, Salami, Champignons, Zwiebeln</span><span class="dots"></span><span class="price">9,20 €</span></li>
+          <li data-tags="fleisch fisch"><span>Tomaten, Käse, Salami, Champignons, Sardellen</span><span class="dots"></span><span class="price">9,20 €</span></li>
+          <li data-tags="fleisch"><span>Tomaten, Käse, Salami, Artischocken, Oliven</span><span class="dots"></span><span class="price">9,80 €</span></li>
+          <li data-tags="fleisch"><span>Tomaten, Käse, Salami, Champignons, Schinken</span><span class="dots"></span><span class="price">9,90 €</span></li>
+          <li data-tags="fleisch"><span>Spezial (mit allem)</span><span class="dots"></span><span class="price">12,00 €</span></li>
+          <li data-tags="veg"><span>Vegetarisch — Champignons, Paprika, Oliven, Peperoni</span><span class="dots"></span><span class="price">9,50 €</span></li>
+          <li data-tags="fleisch"><span>Auberginen, Schinken und Basilikum</span><span class="dots"></span><span class="price">9,90 €</span></li>
+          <li data-tags="fisch"><span>Meeresfrüchte</span><span class="dots"></span><span class="price">11,80 €</span></li>
+          <li data-tags="fleisch"><span>Spinat und Schinken</span><span class="dots"></span><span class="price">9,60 €</span></li>
+          <li data-tags="fisch"><span>Thunfisch, Oliven und Zwiebeln</span><span class="dots"></span><span class="price">10,00 €</span></li>
+          <li data-tags="fleisch"><span>4-Jahreszeiten — Salami, Schinken, Paprika, Champignons, Oliven</span><span class="dots"></span><span class="price">9,80 €</span></li>
+          <li data-tags="fleisch"><span>Tomaten, Käse, Schinken, Zwiebeln und Ei</span><span class="dots"></span><span class="price">9,60 €</span></li>
+          <li data-tags="fleisch"><span>Mozzarella, Schinken und Pilze</span><span class="dots"></span><span class="price">10,60 €</span></li>
+          <li data-tags="veg"><span>Pizzabrot</span><span class="dots"></span><span class="price">5,20 €</span></li>
+          <li data-tags="fleisch"><span>Calzone (Pizzatasche) — Salami, Schinken, Champignons, Paprika, Peperoni, Zwiebeln, Oliven</span><span class="dots"></span><span class="price">12,00 €</span></li>
+          <li data-tags="fleisch scharf"><span>Calzone Pizza Nils — sehr scharf</span><span class="dots"></span><span class="price">13,00 €</span></li>
+          <li data-tags="fleisch"><span>Hawaii — Schinken, Ananas, Oliven</span><span class="dots"></span><span class="price">9,50 €</span></li>
+          <li data-tags="veg"><span>Pizza mit frischem Gemüse — Spinat, Broccoli, Zucchini oder Auberginen</span><span class="dots"></span><span class="price">10,50 €</span></li>
+          <li data-tags="veg"><span>Pizza „Uno“ — Gorgonzola, frische Tomaten, Champignons</span><span class="dots"></span><span class="price">11,00 €</span></li>
+          <li data-tags="veg"><span>Tomaten, Käse, Broccoli</span><span class="dots"></span><span class="price">9,00 €</span></li>
+          <li data-tags="fleisch"><span>Tomaten, Käse, Peperoniwurst &amp; Spinat</span><span class="dots"></span><span class="price">9,60 €</span></li>
+          <li data-tags="fleisch"><span>Tomaten, Käse, ital. geräucherter Schinken</span><span class="dots"></span><span class="price">10,20 €</span></li>
+          <li data-tags="fleisch"><span>Tomaten, Käse, Peperoniwurst</span><span class="dots"></span><span class="price">9,00 €</span></li>
+          <li data-tags="veg scharf"><span>Pizza Dini — Auberginen, frische Champignons, pikant</span><span class="dots"></span><span class="price">9,60 €</span></li>
+          <li data-tags="veg"><span>Pizza Rucola — frische Tomaten, italienischer Hartkäse</span><span class="dots"></span><span class="price">10,50 €</span></li>
+          <li data-tags="veg"><span>Pizza Caprese — frische Tomaten, Mozzarella, Basilikum</span><span class="dots"></span><span class="price">10,00 €</span></li>
+        </ul>
+      </details>
+
+      <details class="menu-accordion reveal" id="cat-extras">
+        <summary><span>Extrawünsche</span><span class="chev">＋</span></summary>
+        <ul class="menu-list">
+          <li><span>Pommes frites</span><span class="dots"></span><span class="price">4,20 €</span></li>
+          <li><span>Schinken, Gorgonzola, Mozzarella, Meeresfrüchte, Shrimps, Rucola, Thunfisch, Feta, Hartkäse</span><span class="dots"></span><span class="price">je 3,50 €</span></li>
+          <li><span>Frisches Gemüse, Champignons, Ananas, doppelt Käse, Sardellen, Schinken, Salami, Peperoniwurst, Artischocken</span><span class="dots"></span><span class="price">je 2,50 €</span></li>
+          <li><span>Peperoni, Paprika, Zwiebeln, Oliven</span><span class="dots"></span><span class="price">je 1,20 €</span></li>
+          <li><span>Zusätzlich Schärfe oder Knoblauch</span><span class="dots"></span><span class="price">je 0,70 €</span></li>
+        </ul>
+      </details>
+
+      <details class="menu-accordion reveal" id="cat-pasta">
+        <summary><span>Pasta &amp; Nudelgerichte</span><span class="chev">＋</span></summary>
+        <ul class="menu-list">
+          <li data-tags="fisch"><span>Spaghetti Vongole mit Muscheln</span><span class="dots"></span><span class="price">10,00 €</span></li>
+          <li data-tags="veg"><span>Spaghetti Napoli mit Tomatensoße</span><span class="dots"></span><span class="price">8,80 €</span></li>
+          <li data-tags="fleisch"><span>Spaghetti Bolognese mit Fleischsoße</span><span class="dots"></span><span class="price">9,80 €</span></li>
+          <li data-tags="fleisch"><span>Spaghetti Carbonara — Ei, Schinken, Sahnesoße</span><span class="dots"></span><span class="price">9,80 €</span></li>
+          <li data-tags="fisch scharf"><span>Spaghetti Chitara — pikant, Thunfisch, Pilze</span><span class="dots"></span><span class="price">9,80 €</span></li>
+          <li data-tags="veg"><span>Spaghetti Pesto mit Basilikumsoße</span><span class="dots"></span><span class="price">8,20 €</span></li>
+          <li data-tags="veg scharf"><span>Spaghetti al Diavolo — pikant, Oliven, Tomatensoße</span><span class="dots"></span><span class="price">9,20 €</span></li>
+          <li data-tags="fleisch"><span>Spaghetti Casalinga — Schinken, Spinat, Tomatensoße</span><span class="dots"></span><span class="price">9,50 €</span></li>
+          <li data-tags="fisch"><span>Spaghetti Marinara — Tomatensoße, Meeresfrüchte</span><span class="dots"></span><span class="price">10,50 €</span></li>
+          <li data-tags="fisch"><span>Spaghetti al Tonno mit Thunfisch</span><span class="dots"></span><span class="price">9,50 €</span></li>
+          <li data-tags="veg scharf"><span>Spaghetti Aglio Olio — pikant</span><span class="dots"></span><span class="price">9,40 €</span></li>
+          <li data-tags="veg"><span>Maccaroni Spezial — Pilze, Soße</span><span class="dots"></span><span class="price">9,60 €</span></li>
+          <li data-tags="veg"><span>Maccaroni Gorgonzola</span><span class="dots"></span><span class="price">10,00 €</span></li>
+          <li data-tags="fleisch"><span>Maccaroni al Forno — Schinken, Käse, Bolognesoße, überbacken</span><span class="dots"></span><span class="price">10,00 €</span></li>
+          <li data-tags="fleisch"><span>Maccaroni al Forno — Schinken, Erbsen, Käse, Bolognesoße, überbacken</span><span class="dots"></span><span class="price">10,50 €</span></li>
+          <li data-tags="fleisch"><span>Maccaroni al Forno — Schinken, Auberginen, Käse, Bolognesoße, überbacken</span><span class="dots"></span><span class="price">10,50 €</span></li>
+          <li data-tags="veg"><span>Maccaroni al Forno vegetarisch</span><span class="dots"></span><span class="price">10,80 €</span></li>
+          <li data-tags="fleisch"><span>Maccaroni Bolognese mit Fleischsoße</span><span class="dots"></span><span class="price">9,80 €</span></li>
+          <li data-tags="veg"><span>Maccaroni 4 Formaggi — vier Käsesorten</span><span class="dots"></span><span class="price">11,80 €</span></li>
+          <li data-tags="fleisch"><span>Tortellini gefüllt mit Schinken und Bolognesoße, überbacken</span><span class="dots"></span><span class="price">11,20 €</span></li>
+          <li data-tags="fleisch"><span>Tortellini Bolognese gefüllt mit Schinken und Fleischsoße</span><span class="dots"></span><span class="price">10,00 €</span></li>
+          <li data-tags="fleisch"><span>Tortellini alla Panna — Schinken, Sahnesoße</span><span class="dots"></span><span class="price">10,00 €</span></li>
+          <li data-tags="fleisch"><span>Lasagne — Schinken, Fleischsoße, im Tontopf überbacken</span><span class="dots"></span><span class="price">10,00 €</span></li>
+          <li data-tags="fleisch"><span>Lasagne — Schinken, Erbsen, Fleischsoße, im Tontopf überbacken</span><span class="dots"></span><span class="price">10,50 €</span></li>
+          <li data-tags="veg"><span>Gnocchi al Gorgonzola</span><span class="dots"></span><span class="price">9,80 €</span></li>
+          <li data-tags="fleisch"><span>Gnocchi Bolognese mit Fleischsoße</span><span class="dots"></span><span class="price">9,80 €</span></li>
+          <li data-tags="fleisch"><span>Cannelloni</span><span class="dots"></span><span class="price">10,00 €</span></li>
+          <li data-tags="fisch"><span>Tagliatelle al Salmone mit Lachs</span><span class="dots"></span><span class="price">10,50 €</span></li>
+          <li data-tags="veg"><span>Tagliatelle al Pomodore mit Tomatensoße</span><span class="dots"></span><span class="price">9,50 €</span></li>
+          <li data-tags="veg"><span>Tagliatelle al Funghi — Pilze, Sahnesoße</span><span class="dots"></span><span class="price">10,00 €</span></li>
+          <li data-tags="fleisch"><span>Tagliatelle Bolognese mit Fleischsoße</span><span class="dots"></span><span class="price">10,00 €</span></li>
+          <li data-tags="fleisch"><span>Penne Matrigiana — Tomatensoße, Schinken, Zwiebeln</span><span class="dots"></span><span class="price">9,00 €</span></li>
+          <li data-tags="veg"><span>Penne mit frischem Gemüse — Broccoli, Spinat oder Zucchini</span><span class="dots"></span><span class="price">10,00 €</span></li>
+        </ul>
+      </details>
+
+      <details class="menu-accordion reveal" id="cat-vorspeisen">
+        <summary><span>Vorspeisen</span><span class="chev">＋</span></summary>
+        <ul class="menu-list">
+          <li data-tags="fleisch"><span>Auberginen köstlich gefüllt mit Hackfleisch</span><span class="dots"></span><span class="price">8,80 €</span></li>
+          <li data-tags="fleisch"><span>Champignons köstlich gefüllt mit Hackfleisch</span><span class="dots"></span><span class="price">8,80 €</span></li>
+          <li data-tags="fleisch"><span>Zucchini köstlich gefüllt mit Hackfleisch</span><span class="dots"></span><span class="price">8,80 €</span></li>
+          <li data-tags="veg"><span>Tomaten-Cremesuppe</span><span class="dots"></span><span class="price">6,20 €</span></li>
+          <li data-tags="veg"><span>Bruschetta — Tomaten, Basilikum</span><span class="dots"></span><span class="price">6,50 €</span></li>
+        </ul>
+      </details>
+
+      <details class="menu-accordion reveal" id="cat-salate">
+        <summary><span>Salate</span><span class="chev">＋</span></summary>
+        <ul class="menu-list">
+          <li data-tags="veg"><span>Gemischter Salat — Gurken, Paprika, Tomaten, Oliven, Zwiebeln</span><span class="dots"></span><span class="price">8,00 €</span></li>
+          <li data-tags="veg"><span>Tomatensalat mit Gurken und Zwiebeln</span><span class="dots"></span><span class="price">8,00 €</span></li>
+          <li data-tags="fisch"><span>Thunfischsalat — Tomaten, Käse, Artischocken, Ei</span><span class="dots"></span><span class="price">9,50 €</span></li>
+          <li data-tags="fleisch"><span>Salata Italiana — Tomaten, Käse, Oliven, Peperoni, Mais, Schinken, Zwiebeln</span><span class="dots"></span><span class="price">9,90 €</span></li>
+          <li data-tags="fisch"><span>Salata Marinara — Krabben, Paprika, Joghurt</span><span class="dots"></span><span class="price">10,50 €</span></li>
+          <li data-tags="veg"><span>Salata Caprese — Tomaten, Mozzarella, Basilikum</span><span class="dots"></span><span class="price">10,50 €</span></li>
+          <li data-tags="veg"><span>Rucola-Salat — Rucola, Tomaten, Hartkäse</span><span class="dots"></span><span class="price">10,80 €</span></li>
+          <li data-tags="veg"><span>Gemischter Salat mit Fetakäse</span><span class="dots"></span><span class="price">9,90 €</span></li>
+          <li data-tags="fleisch"><span>Fitness-Salat mit Putenbrust — Gurken, Paprika, Tomaten, Oliven, Zwiebeln</span><span class="dots"></span><span class="price">10,90 €</span></li>
+        </ul>
+      </details>
+
+      <details class="menu-accordion reveal" id="cat-risotto">
+        <summary><span>Risotto, Fisch &amp; Fleisch</span><span class="chev">＋</span></summary>
+        <ul class="menu-list">
+          <li data-tags="fisch"><span>Risotto mit Meeresfrüchten</span><span class="dots"></span><span class="price">11,20 €</span></li>
+          <li data-tags="veg"><span>Risotto mit Champignons</span><span class="dots"></span><span class="price">10,20 €</span></li>
+          <li data-tags="veg"><span>Risotto mit Gemüse</span><span class="dots"></span><span class="price">11,20 €</span></li>
+          <li data-tags="fisch"><span>Calamari — Tintenfischringe paniert, mit Salat</span><span class="dots"></span><span class="price">14,80 €</span></li>
+          <li data-tags="fleisch"><span>Schnitzel „Wiener Art“ mit Pommes frites und Salat</span><span class="dots"></span><span class="price">14,00 €</span></li>
+          <li data-tags="fleisch"><span>Jägerschnitzel mit Pommes frites und Salat</span><span class="dots"></span><span class="price">15,00 €</span></li>
+          <li data-tags="fleisch"><span>Paprikaschnitzel mit Pommes frites und Salat</span><span class="dots"></span><span class="price">15,00 €</span></li>
+        </ul>
+      </details>
+
+      <details class="menu-accordion reveal" id="cat-dessert">
+        <summary><span>Dessert</span><span class="chev">＋</span></summary>
+        <ul class="menu-list">
+          <li data-tags="veg"><span>Tiramisù hausgemacht</span><span class="dots"></span><span class="price">6,00 €</span></li>
+          <li data-tags="veg"><span>Tartufo Eis</span><span class="dots"></span><span class="price">6,60 €</span></li>
+          <li data-tags="veg"><span>Cassata Eis</span><span class="dots"></span><span class="price">6,60 €</span></li>
+        </ul>
+      </details>
+
+    </div>
+
+    <p class="menu-note">Schnitzel aus Putenfleisch. Bei Lebensmittelallergien reichen wir gerne unsere Allergikerspeisekarte auf Nachfrage.</p>
+  </section>
+
+  <section id="about" class="about">
+    <div class="about-text reveal">
+      <h2 class="section-title">Über <span class="accent">Pizzeria UNO</span></h2>
+      <p>Die Pizzeria Spaghetteria „UNO“ in Schmitten-Niederreifenberg backt Pizza aus dem original Steinofen — dazu ein breites Angebot an Pasta, Salaten, Fisch- und Fleischgerichten. Ehrliche italienische Küche, frisch zubereitet.</p>
+      <p>Alle Gerichte gibt es auch zum Mitnehmen. Und wer es sich lieber zuhause gemütlich macht: Unser Lieferservice bringt dir dein Essen täglich zu den Öffnungszeiten direkt vor die Tür.</p>
+    </div>
+  </section>
+
+
+  <section id="hours" class="hours">
+    <h2 class="section-title reveal">Öffnungszeiten &amp; <span class="accent">Standort</span></h2>
+    <div class="hours-grid">
+      <div class="hours-card reveal">
+        <h3>Öffnungszeiten</h3>
+        <ul class="hours-list">
+          <li><span>Dienstag – Donnerstag &amp; Sonntag</span><span>11:30–15:00 &amp; 17:00–22:00</span></li>
+          <li><span>Freitag &amp; Samstag</span><span>11:30–15:00 &amp; 17:00–23:00</span></li>
+          <li><span>Montag</span><span>Ruhetag</span></li>
+        </ul>
+      </div>
+      <div class="hours-card reveal">
+        <h3>Standort</h3>
+        <p>Brunhildenstr. 40<br>61389 Schmitten-Niederreifenberg</p>
+        <p><a class="link" href="tel:+4960824979948">06082 / 497 99 48</a></p>
+        <iframe
+          class="map-embed"
+          src="https://www.google.com/maps?q=Brunhildenstr.+40,+61389+Schmitten-Niederreifenberg&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Standort Pizzeria Uno auf Google Maps">
+        </iframe>
+      </div>
+      <div class="hours-card reveal">
+        <h3>Lieferservice</h3>
+        <p>Täglich zu den Öffnungszeiten. Ab 3 Gerichten Lieferung frei Haus innerhalb von Schmitten, Oberreifenberg, Niederreifenberg und Seelenberg.</p>
+        <p>Alle Gerichte auch zum Mitnehmen.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact" class="contact">
+    <div class="contact-content reveal">
+      <h2 class="section-title light">Hunger<span class="accent">?</span></h2>
+      <p class="section-sub light">Ruf an, hol ab oder reserviere einen Tisch.</p>
+      <div class="hero-actions">
+        <a href="tel:+4960824979948" class="btn btn-primary">06082 / 497 99 48</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <img src="assets/logo-black.png" alt="Pizzeria Uno" class="footer-logo">
+  <p>© <span id="year"></span> Pizzeria Spaghetteria „UNO“. Alle Rechte vorbehalten.</p>
+</footer>
+
+<div class="mobile-cta">
+  <a href="tel:+4960824979948" class="mobile-cta-btn">Jetzt anrufen &amp; bestellen</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
