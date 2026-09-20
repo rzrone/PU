@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>try{if(localStorage.getItem("pizzeriaUnoTheme")==="soft")document.documentElement.dataset.theme="soft"}catch(e){}</script>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,30 +24,33 @@
   <a href="#top" class="logo">
     <img src="assets/logo-black.png" alt="Pizzeria Uno" class="logo-img">
   </a>
-  <nav class="site-nav">
-    <a href="#menu">Menü</a>
-    <a href="#about">Über uns</a>
-    <a href="#hours">Öffnungszeiten</a>
-    <a href="#contact">Kontakt</a>
-  </nav>
-  <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="header-right">
+    <nav class="site-nav">
+      <a href="#menu">Menü</a>
+      <a href="#about">Über uns</a>
+      <a href="#hours">Öffnungszeiten</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">Sanftere Farben</button>
+    <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
 <main id="top">
 
   <section class="hero">
     <svg class="deco deco-hero" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><use href="#deco-basil"/></svg>
-    <div class="sticker" aria-hidden="true">
-      <svg viewBox="0 0 100 100"><polygon points="50.0,0.0 55.8,9.4 64.1,2.0 67.0,12.7 77.0,7.9 76.8,19.0 87.8,17.3 84.5,27.8 95.5,29.2 89.3,38.4 99.5,42.9 91.0,50.0 99.5,57.1 89.3,61.6 95.5,70.8 84.5,72.2 87.8,82.7 76.8,81.0 77.0,92.1 67.0,87.3 64.1,98.0 55.8,90.6 50.0,100.0 44.2,90.6 35.9,98.0 33.0,87.3 23.0,92.1 23.2,81.0 12.2,82.7 15.5,72.2 4.5,70.8 10.7,61.6 0.5,57.1 9.0,50.0 0.5,42.9 10.7,38.4 4.5,29.2 15.5,27.8 12.2,17.3 23.2,19.0 23.0,7.9 33.0,12.7 35.9,2.0 44.2,9.4" fill="currentColor"/></svg>
-      <span class="sticker-text"><b>Lieferung*</b>frei Haus<small>ab 3 Gerichten</small></span>
-    </div>
     <h1 class="hero-h1"><img src="assets/logo-black.png" alt="Pizzeria Spaghetteria Uno" class="hero-logo"></h1>
     <p class="hero-sub">Pizzeria Spaghetteria „UNO“ · Brunhildenstr. 40 · Schmitten-Niederreifenberg</p>
     <div class="hero-actions">
       <a href="tel:+4960824979948" class="btn btn-primary">Jetzt anrufen</a>
       <a href="#menu" class="btn btn-ghost">Speisekarte</a>
+      <div class="sticker" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><polygon points="50.0,0.0 55.8,9.4 64.1,2.0 67.0,12.7 77.0,7.9 76.8,19.0 87.8,17.3 84.5,27.8 95.5,29.2 89.3,38.4 99.5,42.9 91.0,50.0 99.5,57.1 89.3,61.6 95.5,70.8 84.5,72.2 87.8,82.7 76.8,81.0 77.0,92.1 67.0,87.3 64.1,98.0 55.8,90.6 50.0,100.0 44.2,90.6 35.9,98.0 33.0,87.3 23.0,92.1 23.2,81.0 12.2,82.7 15.5,72.2 4.5,70.8 10.7,61.6 0.5,57.1 9.0,50.0 0.5,42.9 10.7,38.4 4.5,29.2 15.5,27.8 12.2,17.3 23.2,19.0 23.0,7.9 33.0,12.7 35.9,2.0 44.2,9.4" fill="currentColor"/></svg>
+        <span class="sticker-text"><b>Lieferung*</b>frei Haus<small>ab 3 Gerichten</small></span>
+      </div>
     </div>
     <a href="tel:+4960824979948" class="phone-bar">06082 / 497 99 48</a>
     <p class="hero-note">Abhol- &amp; Lieferservice · Alle Gerichte auch zum Mitnehmen</p>

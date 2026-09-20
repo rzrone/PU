@@ -193,3 +193,24 @@ document.querySelectorAll('.jump-bar a').forEach((link) => {
 
   render();
 })();
+
+(function () {
+  const btn = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  const KEY = 'pizzeriaUnoTheme';
+
+  function sync() {
+    const soft = root.dataset.theme === 'soft';
+    btn.textContent = soft ? 'Kräftigere Farben' : 'Sanftere Farben';
+    btn.setAttribute('aria-pressed', String(soft));
+  }
+
+  btn.addEventListener('click', () => {
+    const soft = root.dataset.theme !== 'soft';
+    if (soft) root.dataset.theme = 'soft'; else delete root.dataset.theme;
+    try { localStorage.setItem(KEY, soft ? 'soft' : 'strong'); } catch (e) {}
+    sync();
+  });
+
+  sync();
+})();
